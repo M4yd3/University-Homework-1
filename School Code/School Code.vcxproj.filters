@@ -13,10 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\1">
+      <UniqueIdentifier>{c45ab7b4-e32c-4644-af0a-7aa8e65b0550}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Source Files\2">
+      <UniqueIdentifier>{8b248af0-36c6-4b15-a545-28208a3f620c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="School Code.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="1-5.cpp">
+      <Filter>Source Files\1</Filter>
+    </ClCompile>
+    <ClCompile Include="1-1.cpp">
+      <Filter>Source Files\1</Filter>
+    </ClCompile>
+    <ClCompile Include="1-2.cpp">
+      <Filter>Source Files\1</Filter>
+    </ClCompile>
+    <ClCompile Include="1-3.cpp">
+      <Filter>Source Files\1</Filter>
+    </ClCompile>
+    <ClCompile Include="1-4.cpp">
+      <Filter>Source Files\1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
