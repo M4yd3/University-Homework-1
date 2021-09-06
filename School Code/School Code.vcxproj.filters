@@ -13,36 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\1">
+    <Filter Include="Source Files\Homework">
+      <UniqueIdentifier>{3df6df47-6dd7-4a09-a000-fb1fcedac3e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Homework\1">
       <UniqueIdentifier>{c45ab7b4-e32c-4644-af0a-7aa8e65b0550}</UniqueIdentifier>
       <Extensions>
       </Extensions>
     </Filter>
-    <Filter Include="Source Files\2">
+    <Filter Include="Source Files\Homework\2">
       <UniqueIdentifier>{8b248af0-36c6-4b15-a545-28208a3f620c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\rows">
+    <Filter Include="Source Files\Exam prep">
+      <UniqueIdentifier>{19c04bf3-d17d-4991-833f-ca132dd1c32b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exam prep\Structural Numbers">
+      <UniqueIdentifier>{43552c09-2ac3-4ab5-9913-4d9907f4daad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exam prep\Rows">
       <UniqueIdentifier>{365fb4da-a326-40d8-a6a6-f326da2df79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exam prep\Files">
+      <UniqueIdentifier>{29f585cd-ea7b-44fa-8d66-0fbf56a8c76a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1-3.cpp">
-      <Filter>Source Files\1</Filter>
+      <Filter>Source Files\Homework\1</Filter>
     </ClCompile>
     <ClCompile Include="1-4.cpp">
-      <Filter>Source Files\1</Filter>
+      <Filter>Source Files\Homework\1</Filter>
     </ClCompile>
     <ClCompile Include="1-5.cpp">
-      <Filter>Source Files\1</Filter>
+      <Filter>Source Files\Homework\1</Filter>
     </ClCompile>
     <ClCompile Include="1-1.cpp">
-      <Filter>Source Files\1</Filter>
+      <Filter>Source Files\Homework\1</Filter>
     </ClCompile>
     <ClCompile Include="1-2.cpp">
-      <Filter>Source Files\1</Filter>
+      <Filter>Source Files\Homework\1</Filter>
     </ClCompile>
     <ClCompile Include="rows-1.cpp">
-      <Filter>Source Files\rows</Filter>
+      <Filter>Source Files\Exam prep\Rows</Filter>
+    </ClCompile>
+    <ClCompile Include="structural_numbers-1.cpp">
+      <Filter>Source Files\Exam prep\Structural Numbers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
