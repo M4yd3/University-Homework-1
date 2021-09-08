@@ -11,6 +11,7 @@ int main() {
 		cout << "Wrong input";
 		return -1;
 	}
+
 	set<string> ans;
 	for (int i = m; i < n; i++) {
 		for (int k = i + 1; k <= n; k++) {

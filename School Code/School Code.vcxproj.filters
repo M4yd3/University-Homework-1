@@ -59,5 +59,11 @@
     <ClCompile Include="structural_numbers-1.cpp">
       <Filter>Source Files\Exam prep\Structural Numbers</Filter>
     </ClCompile>
+    <ClCompile Include="rows-2.cpp">
+      <Filter>Source Files\Exam prep\Rows</Filter>
+    </ClCompile>
+    <ClCompile Include="structural_numbers-2.cpp">
+      <Filter>Source Files\Exam prep\Structural Numbers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
