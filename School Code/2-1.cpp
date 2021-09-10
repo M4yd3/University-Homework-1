@@ -10,12 +10,12 @@ int main() {
 	cin >> r;
 	cout << "Input the height of the cone: ";
 	cin >> h;
-	cout << "Input the slant of the cone: ";
-	cin >> l;
-	if (!cin || R <= 0 || r <= 0 || h <= 0 || l <= 0) {
+	if (!cin || R <= 0 || r <= 0 || h <= 0) {
 		cout << "Wrong input";
 		return -1;
 	}
+	
+	l = sqrt(h*h + (R - r) * (R - r));
 
 	cout << "Cone volume: " << ((PI * h * (R*R + R*r + r*r)) / 3);
 	cout << "Cone surface area: " << (PI * (R*R + (R + r) * l + r*r));
