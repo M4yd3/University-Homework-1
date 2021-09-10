@@ -1,6 +1,5 @@
 #include <iostream>
 #include <list>
-
 using namespace std;
 
 int factorial(int n) {
@@ -10,6 +9,7 @@ int factorial(int n) {
 
 int main() {
 	int n = 5; 
+	cout << "Input n";
 	cin >> n;
 	if (!cin || n < 0) {
 		cout << "Wrong input";

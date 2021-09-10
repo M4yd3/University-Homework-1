@@ -1,11 +1,12 @@
 #include <iostream>
+#include <algorithm>
 #include <string> 
 #include <set>
-
 using namespace std;
 
 int main() {
 	int m, n;
+	cout << "Input limits";
 	cin >> m >> n;
 	if (!cin) {
 		cout << "Wrong input";

@@ -65,5 +65,11 @@
     <ClCompile Include="structural_numbers-2.cpp">
       <Filter>Source Files\Exam prep\Structural Numbers</Filter>
     </ClCompile>
+    <ClCompile Include="2-1.cpp">
+      <Filter>Source Files\Homework\2</Filter>
+    </ClCompile>
+    <ClCompile Include="2-2.cpp">
+      <Filter>Source Files\Homework\2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

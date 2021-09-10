@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int GetDividersSum(int n) {
@@ -16,6 +15,7 @@ int GetDividersSum(int n) {
 
 int main() {
 	int m, n; 
+	cout << "Input limits";
 	cin >> m >> n;
 	if (!cin || n < 0 || m < 0) {
 		cout << "Wrong input";

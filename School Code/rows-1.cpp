@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-
 int main() {
 	int n;
 	cin >> n;
+	cout << "Input n";
 	if (!cin) {
 		cout << "Wrong input";
 		return -1;
