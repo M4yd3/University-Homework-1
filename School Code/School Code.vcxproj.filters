@@ -92,5 +92,11 @@
     <ClCompile Include="3-3.cpp">
       <Filter>Source Files\Homework\3</Filter>
     </ClCompile>
+    <ClCompile Include="3-4.cpp">
+      <Filter>Source Files\Homework\3</Filter>
+    </ClCompile>
+    <ClCompile Include="3-5.cpp">
+      <Filter>Source Files\Homework\3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
