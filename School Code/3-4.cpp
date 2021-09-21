@@ -17,7 +17,7 @@ int main() {
     file_read.close();
 
     smatch m;
-    const regex e(R"((?:\s|^)(-?[\.\d]+)(?:\s|,|$))");
+    const regex e(R"((?:(?<=\s)|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=$|\s))");
 
     while (regex_search(line, m, e)) {
         cout << m[1] << endl;
