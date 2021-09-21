@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     ofstream file_write("text.txt");
-    string input; 
+    string input;
     getline(cin, input);
     file_write << input;
     file_write.close();
@@ -14,13 +14,17 @@ int main() {
     ifstream file_read("text.txt");
     string line;
     getline(file_read, line);        
+    cout << line << endl;
     file_read.close();
 
     smatch m;
-    const regex e(R"((?:(?<=\s)|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=$|\s))");
-
-    while (regex_search(line, m, e)) {
-        cout << m[1] << endl;
-        line = m.suffix().str();
+    try {
+        const regex e(R"((?:\s|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=\s|,|$))");
+        while (regex_search(line, m, e)) {
+            cout << m[1] << endl;
+            line = m.suffix().str();
+        }
+    } catch (exception e) {
+        cout << "Error";
     }
 }
