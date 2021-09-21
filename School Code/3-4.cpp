@@ -18,13 +18,9 @@ int main() {
     file_read.close();
 
     smatch m;
-    try {
-        const regex e(R"((?:\s|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=\s|,|$))");
-        while (regex_search(line, m, e)) {
-            cout << m[1] << endl;
-            line = m.suffix().str();
-        }
-    } catch (exception e) {
-        cout << "Error";
+    const regex e(R"((?:\s|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=\s|,|$))");
+    while (regex_search(line, m, e)) {
+        cout << m[1] << endl;
+        line = m.suffix().str();
     }
 }
