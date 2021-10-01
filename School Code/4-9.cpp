@@ -56,12 +56,20 @@ string convert_integer_part_from_decimal(int number, int to) {
 
 string convert_float_part_from_decimal(double number, int to) {
     string converted(".");
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 7; i++) {
         number *= to;
         int n = (int)number;
         number -= n;
         converted += to_string(n);
     }
+    if (values[converted[7]] > 4) {
+        char t = converted[6];
+        converted.resize(6);
+        converted.shrink_to_fit();
+        converted += values_inverted[values[t] + 1];
+    }
+    converted.resize(7);
+    converted.shrink_to_fit();
     return converted;
 }
 
