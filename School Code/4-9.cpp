@@ -16,38 +16,91 @@ map<int, char> values_inverted = {
 };
 
 bool is_valid(string number) {
-  return regex_match(number, regex(R"([0-9A-F]+)"));
+  return regex_match(number, regex(R"(-?[0-9A-F]+(\.[0-9A-F]+)?)"));
 }
 
-int convert_to_decimal(string number, int from) {
+int convert_before_dot(string number, int from) {
   int sum(0);
   for (int i = 0; i < number.size(); i++) {
-    sum += (int)(values[number[i]] * pow(from, number.size() - i - 1));
+    int n = values[number[i]];
+    int m = (int)(n * pow(from, number.size() - i - 1));
+    if (n >= from) {
+        return -1;
+    }
+    sum += m;
   }
   return sum;
 }
 
-string convert_from_decimal(int number, int to) {
-  string converted;
-  while (number != 0) {
-    converted = values_inverted[number % to] + converted;
-    number /= to;
-  }
-  return converted;
+double convert_after_dot(string number, int from) {
+    double sum(0);
+    for (int i = number.size(); i > 0; i--) {
+        int n = values[number[i - 1]];
+        double m = n * pow(from, -i);
+        if (n >= from) {
+            return -1;
+        }
+        sum += m;
+    }
+    return sum;
+}
+
+string convert_integer_part_from_decimal(int number, int to) {
+    string converted;
+    while (number != 0) {
+        converted = values_inverted[number % to] + converted;
+        number /= to;
+    }
+    return converted;
+}
+
+string convert_float_part_from_decimal(double number, int to) {
+    string converted(".");
+    for (int i = 0; i < 6; i++) {
+        number *= to;
+        int n = (int)number;
+        number -= n;
+        converted += to_string(n);
+    }
+    return converted;
 }
 
 string convert(string number, int from, int to) {
   if (to == from) {
     return number;
   }
-  int number_decimal = convert_to_decimal(number, from);
-  string converted = convert_from_decimal(number_decimal, to);
+  string converted("");
+
+  double number_double(0);
+  if (number.find("-") != -1) {
+      number = number.substr(1, number.size() - 1);
+      cout << number << endl;
+      converted += "-";
+  }
+  string integer_part = number.substr(0, number.size());
+
+  int dot = number.find(".");
+  if (dot != -1) {
+      integer_part = number.substr(0, dot);
+      string float_part = number.substr(dot + 1, number.size());
+      number_double += convert_after_dot(float_part, from);
+  }
+
+  number_double += convert_before_dot(integer_part, from);
+  if (number_double == -1) {
+      return "Invalid input";
+  }
+
+  converted += convert_integer_part_from_decimal((int)number_double, to);
+  if (dot != -1) {
+      converted += convert_float_part_from_decimal(number_double - (int)number_double, to);
+  }
   return converted;
 }
 
 int main() {
   string number;
-  int from(10), to(2);
+  int from, to;
   cout << "Input your number: ";
   cin >> number;
   cout << "Convert from: ";
@@ -56,7 +109,7 @@ int main() {
   cin >> to;
 
   if (!cin || from < 2 || from > 16 || to < 2 || to > 16 || !is_valid(number)) {
-    cout << "Wrong input";
+    cout << "Invalid input";
     return -1;
   }
 

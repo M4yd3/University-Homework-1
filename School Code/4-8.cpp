@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "4-8.h"
 using namespace std;
 
 int main() {

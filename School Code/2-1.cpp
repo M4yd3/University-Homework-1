@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	float PI = 3.14159265358979323846;
+	const float PI = 3.14159265358979323846;
 	float R, r, h, l;
 	cout << "Input radius of lower base: ";
 	cin >> R;

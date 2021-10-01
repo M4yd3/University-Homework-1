@@ -20,9 +20,7 @@ int main() {
         size++;
         temp = m.suffix().str();
     }
-    cout << new_line << endl;
-    cout << input << endl;
-    cout << regex_replace(input, regex(R"( )"), "") << endl;
+
     if (new_line != regex_replace(input, regex(R"( )"), "") || size != 10) {
         cout << "Invalid input";
         return -1;
