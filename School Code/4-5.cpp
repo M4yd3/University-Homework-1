@@ -23,9 +23,9 @@ int main(void)
     }
 
     for (int x = 0; x < width / 2; x++) {
-        int y = (int)(sin(x / scale) * scale);
+        int y = (int)(tan(x / scale) * scale);
         SetPixel(hDC, width / 2 - x, y + height / 2, yellow);
-        y = (int)(sin(-x / scale) * scale);
+        y = (int)(tan(-x / scale) * scale);
         SetPixel(hDC, width / 2 + x, y + height / 2, yellow);
     }
 
