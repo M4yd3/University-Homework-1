@@ -140,5 +140,8 @@
     <ClCompile Include="files-1.cpp">
       <Filter>Source Files\Exam prep\Files</Filter>
     </ClCompile>
+    <ClCompile Include="files-2.cpp">
+      <Filter>Source Files\Exam prep\Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
