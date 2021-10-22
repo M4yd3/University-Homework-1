@@ -45,6 +45,9 @@
     <Filter Include="Source Files\Homework\5">
       <UniqueIdentifier>{e9e4bf87-de69-43cd-b312-6a57fe3f3562}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Homework\6">
+      <UniqueIdentifier>{ac20f84d-c959-4276-bb27-b90f599fe94d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1-3.cpp">
@@ -142,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="files-2.cpp">
       <Filter>Source Files\Exam prep\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="25.cpp">
+      <Filter>Source Files\Homework\6</Filter>
+    </ClCompile>
+    <ClCompile Include="36.cpp">
+      <Filter>Source Files\Homework\6</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
