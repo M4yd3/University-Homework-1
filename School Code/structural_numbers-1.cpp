@@ -6,10 +6,10 @@ using namespace std;
 
 int main() {
 	int m, n;
-	cout << "Input limits";
+	cout << "Input limits: ";
 	cin >> m >> n;
 	if (!cin) {
-		cout << "Wrong input";
+		cout << "Invalid input";
 		return -1;
 	}
 

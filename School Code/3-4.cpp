@@ -18,8 +18,8 @@ int main() {
     file_read.close();
 
     smatch m;
-    const regex e(R"((?:\s|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=\s|,|$))");
-    while (regex_search(line, m, e)) {
+    const regex r(R"((?:\s|^)(-?(?:\d+(?:\.\d+)?|\.\d+))(?=\s|,|$))");
+    while (regex_search(line, m, r)) {
         cout << m[1] << endl;
         line = m.suffix().str();
     }

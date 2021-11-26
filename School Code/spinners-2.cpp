@@ -4,11 +4,22 @@ using namespace std;
 
 int main() {
 	cout << "Input M: ";
-	int m, n(0), k(0); cin >> m;
+	int m; cin >> m;
+	int t(m / 3), f(0);
 
-	if (m >= 3) {
-
+	while (true) {
+		int s = t * 3 + f * 4;
+		if (s == m) {
+			break;
+		} else if (s > m) {
+			t = 0;
+			f = 0;
+			break;
+		} else {
+			t = max(t - 1, 0);
+			f++;
+		}
 	}
 
-	cout << n << endl << k;
+	cout << t << endl << f;
 }

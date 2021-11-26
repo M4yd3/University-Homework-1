@@ -5,7 +5,6 @@
 #include <vector>
 using namespace std;
 
-// 36. Исключение из текстового файла заданных символов.
 int main() {
 	cout << "Input symbols to exclude, in single line, without separators: ";
 	string symbols_string, input; getline(cin, input);

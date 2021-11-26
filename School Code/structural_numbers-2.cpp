@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int GetDividersSum(int n) {
+int sum_of_dividers(int n) {
 	if (n <= 1) return 0;
 	int ans = 1;
 	for (int i = 2; i * i <= n; i++) {
@@ -15,15 +15,15 @@ int GetDividersSum(int n) {
 
 int main() {
 	int m, n; 
-	cout << "Input limits";
+	cout << "Input limits: ";
 	cin >> m >> n;
 	if (!cin || n < 0 || m < 0) {
-		cout << "Wrong input";
+		cout << "Invalid input";
 		return -1;
 	}
 
 	for (int i = m; i <= n; i++) {
-		if (i == GetDividersSum(i)) {
+		if (i == sum_of_dividers(i)) {
 			cout << i << " ";
 		}
 	}

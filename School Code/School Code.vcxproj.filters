@@ -24,18 +24,6 @@
     <Filter Include="Source Files\Homework\2">
       <UniqueIdentifier>{8b248af0-36c6-4b15-a545-28208a3f620c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Exam prep">
-      <UniqueIdentifier>{19c04bf3-d17d-4991-833f-ca132dd1c32b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Exam prep\Structural Numbers">
-      <UniqueIdentifier>{43552c09-2ac3-4ab5-9913-4d9907f4daad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Exam prep\Rows">
-      <UniqueIdentifier>{365fb4da-a326-40d8-a6a6-f326da2df79d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Exam prep\Files">
-      <UniqueIdentifier>{29f585cd-ea7b-44fa-8d66-0fbf56a8c76a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Homework\3">
       <UniqueIdentifier>{e0d01fd8-1d08-42b6-b2e6-16076527cd03}</UniqueIdentifier>
     </Filter>
@@ -48,8 +36,14 @@
     <Filter Include="Source Files\Homework\6">
       <UniqueIdentifier>{ac20f84d-c959-4276-bb27-b90f599fe94d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Spinners">
-      <UniqueIdentifier>{a657fa14-0bc6-4521-8a02-b7a640e420a9}</UniqueIdentifier>
+    <Filter Include="Source Files\Homework\7">
+      <UniqueIdentifier>{dd5ce177-a97f-4e17-ba48-946fb798e52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Homework\8">
+      <UniqueIdentifier>{90c72f57-5e2a-49dc-86a6-ce6a2f131fc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Files">
+      <UniqueIdentifier>{29f585cd-ea7b-44fa-8d66-0fbf56a8c76a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -67,18 +61,6 @@
     </ClCompile>
     <ClCompile Include="1-2.cpp">
       <Filter>Source Files\Homework\1</Filter>
-    </ClCompile>
-    <ClCompile Include="rows-1.cpp">
-      <Filter>Source Files\Exam prep\Rows</Filter>
-    </ClCompile>
-    <ClCompile Include="structural_numbers-1.cpp">
-      <Filter>Source Files\Exam prep\Structural Numbers</Filter>
-    </ClCompile>
-    <ClCompile Include="rows-2.cpp">
-      <Filter>Source Files\Exam prep\Rows</Filter>
-    </ClCompile>
-    <ClCompile Include="structural_numbers-2.cpp">
-      <Filter>Source Files\Exam prep\Structural Numbers</Filter>
     </ClCompile>
     <ClCompile Include="2-1.cpp">
       <Filter>Source Files\Homework\2</Filter>
@@ -144,25 +126,46 @@
       <Filter>Source Files\Homework\5</Filter>
     </ClCompile>
     <ClCompile Include="files-1.cpp">
-      <Filter>Source Files\Exam prep\Files</Filter>
+      <Filter>Source Files\Files</Filter>
     </ClCompile>
     <ClCompile Include="files-2.cpp">
-      <Filter>Source Files\Exam prep\Files</Filter>
+      <Filter>Source Files\Files</Filter>
     </ClCompile>
-    <ClCompile Include="25.cpp">
+    <ClCompile Include="files-processing-36.cpp">
       <Filter>Source Files\Homework\6</Filter>
     </ClCompile>
-    <ClCompile Include="36.cpp">
+    <ClCompile Include="files-processing-15.cpp">
+      <Filter>Source Files\Homework\6</Filter>
+    </ClCompile>
+    <ClCompile Include="structural_numbers-1.cpp">
+      <Filter>Source Files\Homework\6</Filter>
+    </ClCompile>
+    <ClCompile Include="structural_numbers-2.cpp">
       <Filter>Source Files\Homework\6</Filter>
     </ClCompile>
     <ClCompile Include="balls.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Homework\7</Filter>
     </ClCompile>
     <ClCompile Include="spinners-1.cpp">
-      <Filter>Source Files\Spinners</Filter>
+      <Filter>Source Files\Homework\8</Filter>
     </ClCompile>
     <ClCompile Include="spinners-2.cpp">
-      <Filter>Source Files\Spinners</Filter>
+      <Filter>Source Files\Homework\8</Filter>
+    </ClCompile>
+    <ClCompile Include="rows-28.cpp">
+      <Filter>Source Files\Homework\6</Filter>
+    </ClCompile>
+    <ClCompile Include="rows-27.cpp">
+      <Filter>Source Files\Homework\6</Filter>
+    </ClCompile>
+    <ClCompile Include="spinners-3.cpp">
+      <Filter>Source Files\Homework\8</Filter>
+    </ClCompile>
+    <ClCompile Include="spinners-4.cpp">
+      <Filter>Source Files\Homework\8</Filter>
+    </ClCompile>
+    <ClCompile Include="spinners-5.cpp">
+      <Filter>Source Files\Homework\8</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
