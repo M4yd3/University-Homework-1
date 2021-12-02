@@ -7,12 +7,12 @@
 #include <regex>
 using namespace std;
 
-struct Book {
+struct Toy {
     string author;
     string title;
     int year;
 
-    Book(string author, string title, double year) {
+    Toy(string author, string title, double year) {
         this->author = author;
         this->title = title;
         this->year = year;
@@ -23,14 +23,14 @@ struct Book {
     }
 };
 
-static Book parse_from_string(string value) {
+static Toy parse_from_string(string value) {
     vector<string> parts;
     while (value.find(";") != -1) {
         parts.push_back(value.substr(0, value.find(";")));
         value = value.substr(value.find(";") + 1, value.size());
     }
     if (value.size() != 0) parts.push_back(value);
-    return Book(parts[0], parts[1], stoi(parts[2]));
+    return Toy(parts[0], parts[1], stoi(parts[2]));
 }
 
 static string string_to_lower(string data) {
@@ -55,7 +55,7 @@ int main() {
         if (!regex_match(input, r)) {
             break;
         }
-        Book book = parse_from_string(input);
+        Toy book = parse_from_string(input);
         file_write << book.convert_to_string() << endl;
         i++;
     }
@@ -74,7 +74,7 @@ int main() {
         return -1;
     }
     while (getline(file_read, line)) {
-        Book book = parse_from_string(line);
+        Toy book = parse_from_string(line);
         if (string_to_lower(book.author) == string_to_lower(author) && book.year == year) 
             cout << "Your book is \"" << book.title << "\"" << endl;
     }
@@ -83,7 +83,7 @@ int main() {
     file_read.open("text.txt");
     string s = "No such book";
     while (getline(file_read, line)) {
-        Book book = parse_from_string(line);
+        Toy book = parse_from_string(line);
         if (string_to_lower(book.title).find("pascal") != -1)
             s = "Book's author and year are: " + book.author + ", " + to_string(book.year);
     }

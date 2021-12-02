@@ -5,16 +5,10 @@
 #include <regex>
 using namespace std;
 
-struct Book {
+struct Toy {
     string title;
     int year;
     vector<int> age;
-
-    Book(string name, double cost, vector<int> age) {
-        this->title = name;
-        this->year = cost;
-        this->age = age;
-    }
 
     string convert_to_string() {
         return title + ";" + to_string(year) + ";" + to_string(age[0]) + "," + to_string(age[1]);
@@ -25,7 +19,7 @@ struct Book {
     }
 };
 
-static Book parse_from_string(string value) {
+static Toy parse_from_string(string value) {
     vector<string> parts;
     while (value.find(";") != -1) {
         parts.push_back(value.substr(0, value.find(";")));
@@ -34,9 +28,9 @@ static Book parse_from_string(string value) {
     if (value.size() != 0) parts.push_back(value);
 
     int comma = parts[2].find(",");
-    vector<int> age = {stoi(parts[2].substr(0, comma)), stoi(parts[2].substr(comma + 1, parts[2].size() - 1)) };
+    vector<int> age = {stoi(parts[2].substr(0, comma)), stoi(parts[2].substr(comma + 1, parts[2].size() - 1))};
 
-    return Book(parts[0], stoi(parts[1]), age);
+    return {parts[0], stoi(parts[1]), age};
 }
 
 const vector<string> names = {"Toy Soldier", "Toy Doll", "Toy Car", "Lego Set", "Building Blocks", "Ball", "Tetris", "NERF Gun"};
@@ -55,8 +49,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         int a1 = 3 + rand() % 15;
         int a2 = a1 + 1 + rand() % (18 - a1);
-        Book toy = Book(names[rand() % names.size()] + " " + to_string(i), 
-            50 + rand() % 4951, {a1, a2});
+        Toy toy = {names[rand() % names.size()] + " " + to_string(i),
+            50 + rand() % 4951, {a1, a2}};
         file_write << toy.convert_to_string() << endl;
     }
     file_write.close();
@@ -67,7 +61,7 @@ int main() {
 
     cout << "Answer A:" << endl;
     while (getline(file_read, line)) {
-        Book toy = parse_from_string(line);
+        Toy toy = parse_from_string(line);
         if (toy.year <= 400 && toy.fits(8)) cout << toy.title << endl;
     }
     file_read.close();
@@ -75,7 +69,7 @@ int main() {
     file_read.open("text.txt");
     int m = -1;
     while (getline(file_read, line)) {
-        Book toy = parse_from_string(line);
+        Toy toy = parse_from_string(line);
         m = max(m, toy.year);
     }
     cout << endl << "Answer B: " << m << endl << endl;
@@ -84,7 +78,7 @@ int main() {
     file_read.open("text.txt");
     cout << "Answer C:" << endl;
     while (getline(file_read, line)) {
-        Book toy = parse_from_string(line);
+        Toy toy = parse_from_string(line);
         if (toy.fits(4) && toy.fits(10)) cout << toy.title << ", " << toy.year << endl;
     }
     file_read.close();

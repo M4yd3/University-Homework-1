@@ -167,5 +167,8 @@
     <ClCompile Include="spinners-5.cpp">
       <Filter>Source Files\Homework\8</Filter>
     </ClCompile>
+    <ClCompile Include="solomon-sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
