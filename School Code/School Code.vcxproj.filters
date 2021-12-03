@@ -45,6 +45,9 @@
     <Filter Include="Source Files\Files">
       <UniqueIdentifier>{29f585cd-ea7b-44fa-8d66-0fbf56a8c76a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Additional">
+      <UniqueIdentifier>{34aee9ba-f247-4c3a-85d3-e7d237fe4c74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1-3.cpp">
@@ -169,6 +172,9 @@
     </ClCompile>
     <ClCompile Include="solomon-sort.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="additional-99.cpp">
+      <Filter>Source Files\Additional</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

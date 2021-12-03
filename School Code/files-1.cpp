@@ -42,8 +42,8 @@ int main() {
         cout << "Invalid input";
         return -1;
     }
-    cout << "Generating toys and writing them into file..." << endl;
 
+    cout << "Generating toys and writing them into file..." << endl;
     srand((unsigned)time(NULL));
     ofstream file_write("text.txt");
     for (int i = 0; i < n; i++) {
