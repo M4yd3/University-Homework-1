@@ -176,5 +176,8 @@
     <ClCompile Include="additional-99.cpp">
       <Filter>Source Files\Additional</Filter>
     </ClCompile>
+    <ClCompile Include="additional-100.cpp">
+      <Filter>Source Files\Additional</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

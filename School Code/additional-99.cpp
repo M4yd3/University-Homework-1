@@ -13,13 +13,14 @@ int main() {
 		num += to_string(r);
 	}
 
-	int input, pluses, minuses;
+	int input, pluses, minuses, rounds = 0;
 	string input_str;
 	while (true) {
 		cin >> input;
 		if (!cin || input > 9999 || input < 1000) continue;
 		input_str = to_string(input);
 		pluses = minuses = 0;
+		rounds++;
 
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
@@ -31,7 +32,7 @@ int main() {
 		}
 
 		if (pluses == 4) {
-			cout << "You won!";
+			cout << "You won in " << rounds << "rounds!";
 			break;
 		}
 	
