@@ -9,11 +9,7 @@ map<char, int> values = {{'0', 0},  {'1', 1},  {'2', 2},  {'3', 3},
                          {'8', 8},  {'9', 9},  {'A', 10}, {'B', 11},
                          {'C', 12}, {'D', 13}, {'E', 14}, {'F', 15}};
 
-map<int, char> values_inverted = {
-    {0, '0'},  {1, '1'},  {2, '2'},  {3, '3'},  {4, '4'},  {5, '5'},
-    {6, '6'},  {7, '7'},  {8, '8'},  {9, '9'},  {10, 'A'}, {11, 'B'},
-    {12, 'C'}, {13, 'D'}, {14, 'E'}, {15, 'F'},
-};
+string values_inverted = "0123456789ABCDEF";
 
 bool is_valid(string number) {
   return regex_match(number, regex(R"(-?[0-9A-F]+(\.[0-9A-F]+)?)"));
@@ -85,18 +81,18 @@ string convert(string number, int from, int to) {
       cout << number << endl;
       converted += "-";
   }
+  
   string integer_part = number.substr(0, number.size());
+  number_double += convert_before_dot(integer_part, from);
+  if (number_double == -1) {
+      return "Invalid input";
+  }
 
   int dot = number.find(".");
   if (dot != -1) {
       integer_part = number.substr(0, dot);
       string float_part = number.substr(dot + 1, number.size());
       number_double += convert_after_dot(float_part, from);
-  }
-
-  number_double += convert_before_dot(integer_part, from);
-  if (number_double == -1) {
-      return "Invalid input";
   }
 
   converted += convert_integer_part_from_decimal((int)number_double, to);
